@@ -1,9 +1,7 @@
 import com.database.DatabaseConnection;
 import org.json.JSONArray;
 import org.json.JSONObject;
-
 import java.io.*;
-import javax.servlet.*;
 import javax.servlet.http.*;
 import java.sql.*;
 
