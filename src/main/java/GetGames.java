@@ -18,15 +18,19 @@ public class GetGames extends HttpServlet
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery("select * from games");
 
-            //Creating a JSONObject object
+            // creating a JSONObject object
             JSONObject jsonObject = new JSONObject();
             JSONArray array = new JSONArray();
             while(rs.next()) {
                 JSONObject record = new JSONObject();
-                //Inserting key-value pairs into the json object
+                // inserting key-value pairs into the json object
                 record.put("gameId", rs.getString("gameId"));
                 record.put("gameName", rs.getString("gameName"));
                 record.put("URL", rs.getString("URL"));
+                record.put("summary", rs.getString("summary"));
+                record.put("developers", rs.getString("developers"));
+                record.put("price", rs.getDouble("price"));
+                record.put("genres", rs.getString("genres"));
                 array.put(record);
             }
 

@@ -16,12 +16,12 @@ public class GetUsers extends HttpServlet
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery("select * from users");
 
-            //Creating a JSONObject object
+            // creating a JSONObject object
             JSONObject jsonObject = new JSONObject();
             JSONArray array = new JSONArray();
             while(rs.next()) {
                 JSONObject record = new JSONObject();
-                //Inserting key-value pairs into the json object
+                // inserting key-value pairs into the json object
                 record.put("fullName", rs.getString("fullname"));
                 record.put("password", rs.getString("password"));
                 record.put("email", rs.getString("emailid"));
