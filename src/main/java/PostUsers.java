@@ -57,20 +57,27 @@ public class PostUsers extends HttpServlet {
                 throw new IOException("Error parsing JSON request string");
             }
 
-            // set data to st pointer
-            st.setString(1, fullname);
-            st.setString(2, password);
-            st.setString(3, email);
+            if (fullname.isEmpty() || password.isEmpty() )
+            {
+                // display that fullname and password must not be empty
+                PrintWriter out = response.getWriter();
+                out.println(" Some fields are empty");
+            }else{
+                // set data to st pointer
+                st.setString(1, fullname);
+                st.setString(2, password);
+                st.setString(3, email);
 
-            // register changes in database
-            st.executeUpdate();
-            st.close();
-            con.close();
+                // register changes in database
+                st.executeUpdate();
+                st.close();
+                con.close();
 
-            // display successfully created message
-            PrintWriter out = response.getWriter();
-            out.println("Successfully Inserted");
+                // display successfully created message
+                PrintWriter out = response.getWriter();
+                out.println("Successfully Inserted");
 
+            }
         }
         catch (Exception e) {
             // display failure message
