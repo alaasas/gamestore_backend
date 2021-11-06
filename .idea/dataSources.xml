@@ -8,11 +8,11 @@
       <jdbc-url>jdbc:mysql://localhost:3306</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="game@localhost" uuid="e39d084a-b55c-449d-8564-76a65e72740e">
+    <data-source source="LOCAL" name="spike01@localhost [2]" uuid="f10cd83a-a785-4552-a0d7-010d0148ce3e">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/game</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/spike01</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>

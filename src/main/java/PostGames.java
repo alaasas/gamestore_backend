@@ -36,7 +36,7 @@ public class PostGames extends HttpServlet {
             // get data from the request object and set data to st pointer
             st.setInt(1, count + 1);
             st.setString(2, request.getParameter("gameName"));
-            st.setString(3, request.getParameter("developer"));
+            st.setString(3, request.getParameter("URL"));
 
             // register changes in database
             st.executeUpdate();
