@@ -26,7 +26,7 @@ public class GetGames extends HttpServlet
                 //Inserting key-value pairs into the json object
                 record.put("gameId", rs.getString("gameId"));
                 record.put("gameName", rs.getString("gameName"));
-                record.put("developer", rs.getString("developer"));
+                record.put("URL", rs.getString("URL"));
                 array.put(record);
             }
 
